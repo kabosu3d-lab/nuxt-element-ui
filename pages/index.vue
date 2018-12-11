@@ -1,9 +1,7 @@
 <template>
   <section>
-    <h1 class="header">Nuxt TypeScript Starter</h1>
-    <div class="cards">
-      <Card v-for="person in people" :key="person.id" :person="person"></Card>
-    </div>
+    <Star></Star>
+    <Card v-for="person in people" :key="person.id" :person="person"></Card>
   </section>
 </template>
 
@@ -11,9 +9,11 @@
 import { Component, Vue } from "nuxt-property-decorator";
 import { State } from "vuex-class";
 import Card from "~/components/Card.vue";
+import Star from "~/components/Star.vue";
 
 @Component({
   components: {
+    Star,
     Card
   }
 })
